@@ -12,6 +12,16 @@ body {
   background-position: 0px 0px;
   background-size: 300px 300px;
 }
+
+html {
+  font-size: 100%;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
 * {
   margin-top: 0;
   

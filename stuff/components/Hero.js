@@ -1,7 +1,8 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { Section } from '../styles'
 import useMouse from '@react-hook/mouse-position'
+
 // import { ReactComponent as Github } from '../icons/github.svg';
 // import { ReactComponent as Linkedin } from '../icons/linkedin.svg';
 // import { ReactComponent as Twitter } from '../icons/twitter.svg';
@@ -46,15 +47,8 @@ const Info = styled.p`
     margin-left: 2rem;
 `;
 
-const Social = styled.div`
-    height: 1rem;
-    width: 10rem;
-    margin-left: 4.1rem;
+const SocialContainer = styled.div`
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between; 
-    box-sizing: border-box;
-
 `;
 
 const SocialButton = styled.button`
@@ -75,12 +69,8 @@ const SocialButton = styled.button`
     }
 `;
 
-const SocialIcon = styled.svg`
 
-`;
-
-
-let previousPosition = {x: 0, y: 0};
+let previousPosition = { x: 0, y: 0 };
 export default function Hero() {
     const ref = useRef()
     // const mouse = useMouse(ref, {
@@ -96,13 +86,20 @@ export default function Hero() {
 
     return (
         <Section ref={ref}>
-            <Ball x={previousPosition.x} y={previousPosition.y}/>
+            <Ball x={previousPosition.x} y={previousPosition.y} />
             <Title>Chris Chifor</Title>
-            <Subtitle>Front End Developer</Subtitle>
-            <Info>Located in Toronto, Canada 📍 <br/>
+            <Subtitle>Full Stack Developer and Product Designer</Subtitle>
+            <Info>Located in Toronto, Canada 📍 <br />
             Studying at the University of Toronto</Info>
-            <Info>Currently working on Longevity at <b>MYKIGAI</b></Info>
-            {/* <Social><Linkedin/><Github/><Twitter/><Spotify/></Social> */}
+            <Info>Currently working on Longevity at  <b>MYKIGAI</b></Info>
+            <SocialContainer>
+                <a href="https://github.com/ChristopherChifor">
+                    <img src="/github.svg" alt="git icon" />
+                </a>
+                <img src="/twitter.svg" alt="git icon" />
+                <img src="/linkedin.svg" alt="git icon" />
+                <img src="/headphones.svg" alt="git icon" />
+            </SocialContainer>
         </Section>
     )
 }
