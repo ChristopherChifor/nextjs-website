@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { Section } from '../styles'
 import useMouse from '@react-hook/mouse-position'
+import github from "../icons/github.svg";
 
 // import { ReactComponent as Github } from '../icons/github.svg';
 // import { ReactComponent as Linkedin } from '../icons/linkedin.svg';
@@ -28,27 +29,35 @@ const Ball = styled.div`
 `;
 
 const Title = styled.h1`
-    padding: 2rem;
     font-size: 7rem;
-    padding-bottom: 0;
 `;
 
 const Subtitle = styled.h2`
-    padding: 2rem;
     font-size: 2.5rem;
-    padding-top: 0;
-    margin-left: 2rem;
 `;
 
 const Info = styled.p`
-    padding: 2rem;
     font-size: 2rem;
-    padding-top: 0;
-    margin-left: 2rem;
 `;
 
 const SocialContainer = styled.div`
     display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    font-size: 2rem;
+    max-width: 41ch;
+
+    & > * {
+        /* width: 50px; */
+        /* height: 50px; */
+        & > * {
+            width: 50px;
+            height: 50px;
+        }
+  
+    }
+  
 `;
 
 const SocialButton = styled.button`
@@ -89,16 +98,21 @@ export default function Hero() {
             <Ball x={previousPosition.x} y={previousPosition.y} />
             <Title>Chris Chifor</Title>
             <Subtitle>Full Stack Developer and Product Designer</Subtitle>
-            <Info>Located in Toronto, Canada 📍 <br />
+            <Info>Located in Toronto, Canada 📍 <br/>
             Studying at the University of Toronto</Info>
             <Info>Currently working on Longevity at  <b>MYKIGAI</b></Info>
             <SocialContainer>
                 <a href="https://github.com/ChristopherChifor">
-                    <img src="/github.svg" alt="git icon" />
+                    <img src='/github.svg'/>
+                    {/* <Image src="/github.svg" alt="git icon" width={30} height={30}/> */}
                 </a>
-                <img src="/twitter.svg" alt="git icon" />
-                <img src="/linkedin.svg" alt="git icon" />
-                <img src="/headphones.svg" alt="git icon" />
+                {/* <Github/> */}
+                <a href="https://github.com/ChristopherChifor"><img src='/linkedin.svg'/></a>
+                <a href="https://github.com/ChristopherChifor"><img src='/twitter.svg'/></a>
+                <a href="https://github.com/ChristopherChifor"><img src='/headphones.svg'/></a>
+                {/* <Image src="/twitter.svg" alt="git icon" width={30} height={30}/> */}
+                {/* <Image src="/linkedin.svg" alt="git icon" width={30} height={30}/> */}
+                {/* <Image src="/headphones.svg" alt="git icon" width={30} height={30}/> */}
             </SocialContainer>
         </Section>
     )

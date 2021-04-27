@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@react-hook/mouse-position": "^4.1.0",
+    "@svgr/webpack": "^5.5.0",
     "babel-plugin-styled-components": "^1.12.0",
     "next": "10.x",
     "react": "17.x",
