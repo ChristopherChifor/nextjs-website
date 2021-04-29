@@ -48,8 +48,8 @@ const ContactSection = styled.div`
 `
 const Fieldset = styled.div`
     display: flex;
-flex-direction: column;
-border: none;
+    flex-direction: column;
+    border: none;
     margin-bottom: 2em;
 `
 
@@ -57,7 +57,7 @@ export default function Contact({ isOpen, toggleContact }) {
     return (
         <ContactWrapper isOpen={isOpen}>
             <ContactSection>
-                {/* <CloseContact onClick={toggleContact}><Close/></CloseContact> */}
+                <CloseContact onClick={toggleContact}> <img src='/close_white_24dp.svg'/> </CloseContact>
             </ContactSection>
             <h1>Contact Me</h1>
             <Fieldset>

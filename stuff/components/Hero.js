@@ -106,13 +106,9 @@ export default function Hero() {
                     <img src='/github.svg'/>
                     {/* <Image src="/github.svg" alt="git icon" width={30} height={30}/> */}
                 </a>
-                {/* <Github/> */}
-                <a href="https://github.com/ChristopherChifor"><img src='/linkedin.svg'/></a>
-                <a href="https://github.com/ChristopherChifor"><img src='/twitter.svg'/></a>
-                <a href="https://github.com/ChristopherChifor"><img src='/headphones.svg'/></a>
-                {/* <Image src="/twitter.svg" alt="git icon" width={30} height={30}/> */}
-                {/* <Image src="/linkedin.svg" alt="git icon" width={30} height={30}/> */}
-                {/* <Image src="/headphones.svg" alt="git icon" width={30} height={30}/> */}
+                <a href="https://www.linkedin.com/in/christopher-chifor/"><img src='/linkedin.svg'/></a>
+                <a href="https://twitter.com/ChrisChifor"><img src='/twitter.svg'/></a>
+                <a href="https://distrokid.com/hyperfollow/ock4/cant-find-you-feat-oliana"><img src='/headphones.svg'/></a>
             </SocialContainer>
         </Section>
     )
