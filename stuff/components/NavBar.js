@@ -41,7 +41,7 @@ export default function NavBar({toggleContact}) {
            <NavButton> 
             <img src='/home.svg'/>
            </NavButton>
-           <NavButton>Résumé</NavButton>
+           <a href="/resume"><NavButton>Résumé</NavButton></a>
            <NavButton>About</NavButton>
            <ContactButton onClick={toggleContact}>Get in touch</ContactButton>
         </NavBarWrapper>

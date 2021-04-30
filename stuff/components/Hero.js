@@ -1,15 +1,21 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { Section } from '../styles'
-import useMouse from '@react-hook/mouse-position'
-import github from "../icons/github.svg";
+import { Info, Section, Subtitle, Title } from '../styles'
 
-// import { ReactComponent as Github } from '../icons/github.svg';
-// import { ReactComponent as Linkedin } from '../icons/linkedin.svg';
-// import { ReactComponent as Twitter } from '../icons/twitter.svg';
-// import { ReactComponent as Spotify } from '../icons/headphones.svg';
+export const useMousePosition = () => {
+    const [position, setPosition] = useState({ x: 0, y: 0 });
 
+    useEffect(() => {
+        const setFromEvent = (e) => setPosition({ x: e.clientX, y: e.clientY });
+        window.addEventListener("mousemove", setFromEvent);
 
+        return () => {
+            window.removeEventListener("mousemove", setFromEvent);
+        };
+    }, []);
+
+    return position;
+};
 const Ball = styled.div`
     position: absolute;
     top: ${props => props.y}px;
@@ -28,18 +34,6 @@ const Ball = styled.div`
     z-index: -1;
 `;
 
-const Title = styled.h1`
-    font-size: 7rem;
-`;
-
-const Subtitle = styled.h2`
-    font-size: 2.5rem;
-`;
-
-const Info = styled.p`
-    font-size: 2rem;
-`;
-
 const SocialContainer = styled.div`
     display: flex;
     align-items: center;
@@ -47,6 +41,7 @@ const SocialContainer = styled.div`
     gap: 1rem;
     font-size: 2rem;
     max-width: 41ch;
+    margin-top: 4rem;
 
     & > * {
         /* width: 50px; */
@@ -78,38 +73,39 @@ const SocialButton = styled.button`
     }
 `;
 
+const Footer = styled.div`
+    padding: 0rem 2rem;
+    position: fixed;     
+       text-align: left;    
+       bottom: 0px; 
+       width: 100%;
+    position: fixed;
+`;
+
 
 let previousPosition = { x: 0, y: 0 };
 export default function Hero() {
     const ref = useRef()
-    // const mouse = useMouse(ref, {
-    //     enterDelay: 100,
-    //     leaveDelay: 100,
-    //   })
-
-    // if (mouse.isOver) {
-    //     previousPosition.x = mouse.x;
-    //     previousPosition.y = mouse.screenY;
-
-    // }
+    const position = useMousePosition();
 
     return (
         <Section ref={ref}>
-            <Ball x={previousPosition.x} y={previousPosition.y} />
+            <Ball x={position.x} y={position.y} />
             <Title>Chris Chifor</Title>
             <Subtitle>Full Stack Developer and Product Designer</Subtitle>
-            <Info>Located in Toronto, Canada 📍 <br/>
+            <Info>Located in Toronto, Canada 📍 <br />
             Studying at the University of Toronto</Info>
-            <Info>Currently working on Longevity at  <b>MYKIGAI</b></Info>
+            <Info>Currently working on Longevity at  <a href="https://www.mykigai.com/"><b>MYKIGAI</b></a></Info>
             <SocialContainer>
                 <a href="https://github.com/ChristopherChifor">
-                    <img src='/github.svg'/>
+                    <img src='/github.svg' />
                     {/* <Image src="/github.svg" alt="git icon" width={30} height={30}/> */}
                 </a>
-                <a href="https://www.linkedin.com/in/christopher-chifor/"><img src='/linkedin.svg'/></a>
-                <a href="https://twitter.com/ChrisChifor"><img src='/twitter.svg'/></a>
-                <a href="https://distrokid.com/hyperfollow/ock4/cant-find-you-feat-oliana"><img src='/headphones.svg'/></a>
+                <a href="https://www.linkedin.com/in/christopher-chifor/"><img src='/linkedin.svg' /></a>
+                <a href="https://twitter.com/ChrisChifor"><img src='/twitter.svg' /></a>
+                <a href="https://distrokid.com/hyperfollow/ock4/cant-find-you-feat-oliana"><img src='/headphones.svg' /></a>
             </SocialContainer>
+            <Footer>Designed and built by me :) </Footer>
         </Section>
     )
 }
