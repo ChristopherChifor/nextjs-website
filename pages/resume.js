@@ -10,7 +10,7 @@ export default function Resume() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ResumePage/>
+      <ResumePage />
     </div>
   )
 }

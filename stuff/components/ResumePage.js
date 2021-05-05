@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Subtitle, Title } from '../styles';
+import { AppWrapper, Main, Subtitle, Title } from '../styles';
+import Contact from './Contact';
 import NavBar from './NavBar';
 
 const ResumeWrapper = styled.div`
@@ -26,36 +27,59 @@ const ResumeWrapper = styled.div`
     }
 `;
 
-const TitleSection= styled.div`
+const TitleSection = styled.div`
     grid-area: title;
     
-`
-const Info= styled.div`
+`;
+
+const Info = styled.div`
     grid-area: info;
-`
-const About = styled.div` grid-area: about;`
-const Experience = styled.div` grid-area: experience;`
+    font-size: 2.5rem;
+`;
+
+
+const About = styled.div`
+    grid-area: about;
+`;
+
+const University = styled.div`
+    grid-area: experience;
+`;
+
+
 const Poo = styled.div` grid-area: poo;`
 const Download = styled.div` grid-area: download;`
 
 export default function ResumePage() {
     const [contactOpen, setContactOpen] = useState(false)
-  const toggleContact = () => {
-    setContactOpen(!contactOpen)
-  }
+    const toggleContact = () => {
+        setContactOpen(!contactOpen)
+    }
     return (
-        <>
-        <NavBar/>
-        <ResumeWrapper>
-            <TitleSection>
-                <Subtitle>hello</Subtitle>
-                </TitleSection>
-            <Info></Info>
-            <About>infoooo</About>
-            <Experience>infoooo</Experience>
-            <Poo>infoooo</Poo>
-            <Download>infoooo</Download>
-        </ResumeWrapper>
-        </>
+        <AppWrapper>
+            <Main>
+                <NavBar toggleContact={toggleContact} />
+                <ResumeWrapper>
+                    <TitleSection>
+                        <Subtitle>Work Experience</Subtitle>
+                    </TitleSection>
+                    <Info>
+                        <Subtitle>Education</Subtitle>
+                    </Info>
+                    <About>infoooo</About>
+                    <University>
+                        <h3>University of Toronto</h3>
+                HBSc • Computer Science, Mathmeatics, Statistics and Economics <br />
+                        <h5> <i>2019-2023</i></h5>
+                    </University>
+                    <Poo>infoooo</Poo>
+                    <Download>Temporarily unavailable</Download>
+                    <Subtitle>oh also i have a song:</Subtitle>
+                    <iframe src="https://open.spotify.com/embed/track/24DasXEtte7wU2v3OiJa5q" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </ResumeWrapper>
+                <Contact isOpen={contactOpen} toggleContact={toggleContact} />
+
+            </Main>
+        </AppWrapper>
     )
 }

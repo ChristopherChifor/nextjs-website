@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { Info, Section, Subtitle, Title } from '../styles'
+import { Info, Link, Section, Subtitle, Title } from '../styles'
 
 export const useMousePosition = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -95,7 +95,7 @@ export default function Hero() {
             <Subtitle>Full Stack Developer and Product Designer</Subtitle>
             <Info>Located in Toronto, Canada 📍 <br />
             Studying at the University of Toronto</Info>
-            <Info>Currently working on Longevity at  <a href="https://www.mykigai.com/"><b>MYKIGAI</b></a></Info>
+            <Info>Currently working on Longevity at  <Link href="https://www.mykigai.com/"><b>MYKIGAI</b></Link></Info>
             <SocialContainer>
                 <a href="https://github.com/ChristopherChifor">
                     <img src='/github.svg' />

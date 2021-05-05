@@ -20,3 +20,40 @@ export const Info = styled.p`
     margin-top: 4rem;
     margin-bottom: 2rem;
 `;
+
+export const Main = styled.div`
+  margin-right: ${props => props.isOpen ? 20 : 0}vw; 
+  @media (max-width: 600px) {
+    margin-right: ${props => props.isOpen ? 100 : 0}vw; 
+  }
+`;
+
+export const AppWrapper = styled.div`
+  & > * {
+    transition: all 0.5s ease;
+  }
+`;
+
+const linkColor = 'blue'
+export const Link = styled.a`
+    all: unset;
+    color: ${linkColor};
+    position: relative;
+    /* mix-blend-mode: difference; */
+    &::before {
+        content: '';
+        background-color: ${linkColor};
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -3px;
+        transition: all 0.1 ease;
+    }
+    &:hover {
+        cursor: pointer;
+        &::before {
+            bottom: 0;
+        }
+    }
+
+`

@@ -28,6 +28,7 @@ const ContactWrapper = styled.div`
           margin-top: 1.5rem;
       }
   }
+  transition: all 0.5s ease;
 `;
 
 const CloseContact = styled.div`
