@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-// import { ReactComponent as Home } from '../icons/home.svg';
 
 const NavBarWrapper = styled.nav`
   padding: 0.2rem;
@@ -39,13 +38,19 @@ export default function NavBar({toggleContact}) {
     return (
         <NavBarWrapper>
            <NavButton> 
-           <a href="/">
-            <img src='/home.svg'/>
+            <a href="/">
+                <img src='/home.svg'/>
             </a>
            </NavButton>
            
-           <a href="/resume"><NavButton>Résumé</NavButton></a>
-           <NavButton>About</NavButton>
+           <a href="/resume">
+                <NavButton>
+                   Résumé
+                </NavButton>
+            </a>
+           <NavButton>
+                About
+            </NavButton>
            <ContactButton onClick={toggleContact}>Get in touch</ContactButton>
         </NavBarWrapper>
     )

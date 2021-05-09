@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import App from '../stuff/App'
 import ResumePage from '../stuff/components/ResumePage'
 import styles from '../styles/Home.module.css'
 

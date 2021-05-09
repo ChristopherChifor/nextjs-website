@@ -20,7 +20,7 @@ const ResumeWrapper = styled.div`
     "skills courses";
     min-height: 100vh;
     @media (min-width: 1000px){
-        margin-left: 8rem;
+        margin-left: 5rem;
         font-size: 150%;
     }
     @media (max-width: 700px) {
@@ -88,7 +88,7 @@ export default function ResumePage() {
                     </Mykigai>
                     <University>
                         <h1><Link href="https://www.utoronto.ca/">University of Toronto 🏫</Link></h1>
-                            HBSc • Computer Science, Mathmeatics, Statistics and Economics <br />
+                            HBSc • Computer Science, Mathematics, Statistics and Economics <br />
                         <h5> <i>2019-2023</i></h5>
                     </University>
                     <Poo>
