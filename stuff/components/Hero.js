@@ -44,8 +44,6 @@ const SocialContainer = styled.div`
     margin-top: 4rem;
 
     & > * {
-        /* width: 50px; */
-        /* height: 50px; */
         & > * {
             width: 50px;
             height: 50px;
@@ -95,17 +93,14 @@ export default function Hero() {
             <Subtitle>Full Stack Developer and Product Designer</Subtitle>
             <Info>Located in Toronto, Canada 📍 <br />
             Studying at the University of Toronto</Info>
-            <Info>Currently working on Longevity at  <Link href="https://www.mykigai.com/"><b>MYKIGAI</b></Link></Info>
+            <Info>Currently working on longevity at  <Link href="https://www.mykigai.com/"><b>Mykigai</b></Link></Info>
             <SocialContainer>
-                <a href="https://github.com/ChristopherChifor">
-                    <img src='/github.svg' />
-                    {/* <Image src="/github.svg" alt="git icon" width={30} height={30}/> */}
-                </a>
+                <a href="https://github.com/ChristopherChifor"><img src='/github.svg' /></a>
                 <a href="https://www.linkedin.com/in/christopher-chifor/"><img src='/linkedin.svg' /></a>
                 <a href="https://twitter.com/ChrisChifor"><img src='/twitter.svg' /></a>
                 <a href="https://distrokid.com/hyperfollow/ock4/cant-find-you-feat-oliana"><img src='/headphones.svg' /></a>
             </SocialContainer>
-            <Footer>Designed and built by me :) </Footer>
+            <Footer>Designed and built by me :)</Footer>
         </Section>
     )
 }

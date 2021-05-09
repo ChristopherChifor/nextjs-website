@@ -34,7 +34,7 @@ export const AppWrapper = styled.div`
   }
 `;
 
-const linkColor = 'blue'
+const linkColor = '#1e90ff'
 export const Link = styled.a`
     all: unset;
     color: ${linkColor};
@@ -46,14 +46,16 @@ export const Link = styled.a`
         width: 100%;
         height: 3px;
         position: absolute;
-        bottom: -3px;
-        transition: all 0.1 ease;
+        bottom: -2px;
+        transition: all 0.1s ease-in;
     }
     &:hover {
         cursor: pointer;
+        color: #ff6500;
         &::before {
             bottom: 0;
+            width: 40%
         }
     }
-
+    
 `

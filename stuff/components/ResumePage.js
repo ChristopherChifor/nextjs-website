@@ -3,52 +3,67 @@ import styled from 'styled-components'
 import { AppWrapper, Main, Subtitle, Title } from '../styles';
 import Contact from './Contact';
 import NavBar from './NavBar';
+import {Link} from '../styles'
+
 
 const ResumeWrapper = styled.div`
+  margin-left: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.3fr 1.3fr 1fr;
-  gap: 0px 0px;
+  justify-content: center;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr;
+  gap: 10px 0px;
+  font-size: 130%;
   grid-template-areas:
-    "title info"
-    "about experience"
-    "poo download";
+    "work education"
+    "job school"
+    "skills courses";
     min-height: 100vh;
+    @media (min-width: 1000px){
+        margin-left: 8rem;
+        font-size: 150%;
+    }
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
-        background-color: red;
+        /* background-color: red; */
         grid-template-areas:
-    "title"
-    "info"
-    "about"
-    "experience"
-    "poo"
-    "download";
+    "work"
+    "job"
+    "skills"
+    "education"
+    "school"
+    "courses";
     }
 `;
 
 const TitleSection = styled.div`
-    grid-area: title;
-    
+    margin-top: 50px;
+    grid-area: work;
+    font-size: 150%;
 `;
 
 const Info = styled.div`
-    grid-area: info;
-    font-size: 2.5rem;
+    margin-top: 50px;
+    grid-area: education;
+    font-size: 150%;
 `;
 
 
-const About = styled.div`
-    grid-area: about;
+const Mykigai = styled.div`
+    grid-area: job;
 `;
 
 const University = styled.div`
-    grid-area: experience;
+    grid-area: school;
 `;
 
 
-const Poo = styled.div` grid-area: poo;`
-const Download = styled.div` grid-area: download;`
+const Poo = styled.div`
+    grid-area: skills;
+`;
+
+
+const Download = styled.div` grid-area: courses;`
 
 export default function ResumePage() {
     const [contactOpen, setContactOpen] = useState(false)
@@ -61,24 +76,43 @@ export default function ResumePage() {
                 <NavBar toggleContact={toggleContact} />
                 <ResumeWrapper>
                     <TitleSection>
-                        <Subtitle>Work Experience</Subtitle>
+                        <h1>Experience</h1>
                     </TitleSection>
                     <Info>
-                        <Subtitle>Education</Subtitle>
+                        <h1>Education</h1>
                     </Info>
-                    <About>infoooo</About>
+                    <Mykigai>
+                        <h1><Link href="https://www.mykigai.com/">Mykigai 🧬</Link></h1>
+                        Full Stack Developer • Product Designer
+                        <h5> <i>2021 Summer</i></h5>
+                    </Mykigai>
                     <University>
-                        <h3>University of Toronto</h3>
-                HBSc • Computer Science, Mathmeatics, Statistics and Economics <br />
+                        <h1><Link href="https://www.utoronto.ca/">University of Toronto 🏫</Link></h1>
+                            HBSc • Computer Science, Mathmeatics, Statistics and Economics <br />
                         <h5> <i>2019-2023</i></h5>
                     </University>
-                    <Poo>infoooo</Poo>
-                    <Download>Temporarily unavailable</Download>
-                    <Subtitle>oh also i have a song:</Subtitle>
-                    <iframe src="https://open.spotify.com/embed/track/24DasXEtte7wU2v3OiJa5q" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <Poo>
+                        <h3>Skills applied:</h3>
+                        <li>Vue.js</li>
+                        <li>Nuxt.js</li>
+                        <li>Figma</li>
+                        <li>HTML/CSS</li>
+                        <li>UI/UX Design</li>
+                        <li>Wireframing</li>
+                        <li>Flask</li>
+                    </Poo>
+                    <Download>
+                        <h3>Relevant courses:</h3>
+                        <li>Methods for Machine learning II</li>
+                        <li>Data Structures and Analysis</li>
+                        <li>Multivariable Calculus</li>
+                        <li>Software Design</li>
+                        <li>Probability, Statistics and Data Analysis II</li>
+                        <li>Financial Economics</li>
+                    </Download>
+                    <h1>Check out my song:<iframe src="https://open.spotify.com/embed/track/24DasXEtte7wU2v3OiJa5q" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></h1>
                 </ResumeWrapper>
                 <Contact isOpen={contactOpen} toggleContact={toggleContact} />
-
             </Main>
         </AppWrapper>
     )

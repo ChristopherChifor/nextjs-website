@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { ReactComponent as Close } from '../icons/x.svg';
-
 
 const ContactWrapper = styled.div`
   height: 100%;

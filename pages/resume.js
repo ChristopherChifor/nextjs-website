@@ -7,8 +7,8 @@ export default function Resume() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>My Resume</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <ResumePage />
     </div>
