@@ -58,7 +58,7 @@ const University = styled.div`
 `;
 
 
-const Poo = styled.div`
+const Skills = styled.div`
     grid-area: skills;
 `;
 
@@ -91,7 +91,7 @@ export default function ResumePage() {
                             HBSc • Computer Science, Mathematics, Statistics and Economics <br />
                         <h5> <i>2019-2023</i></h5>
                     </University>
-                    <Poo>
+                    <Skills>
                         <h3>Skills applied:</h3>
                         <li>Vue.js</li>
                         <li>Nuxt.js</li>
@@ -100,7 +100,7 @@ export default function ResumePage() {
                         <li>UI/UX Design</li>
                         <li>Wireframing</li>
                         <li>Flask</li>
-                    </Poo>
+                    </Skills>
                     <Download>
                         <h3>Relevant courses:</h3>
                         <li>Methods for Machine learning II</li>

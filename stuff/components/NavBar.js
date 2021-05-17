@@ -48,9 +48,11 @@ export default function NavBar({toggleContact}) {
                    Résumé
                 </NavButton>
             </a>
-           <NavButton>
-                About
-            </NavButton>
+            <a href="/about">
+                <NavButton>
+                    About
+                </NavButton>
+            </a>
            <ContactButton onClick={toggleContact}>Get in touch</ContactButton>
         </NavBarWrapper>
     )

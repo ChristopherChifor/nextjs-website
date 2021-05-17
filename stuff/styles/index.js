@@ -42,7 +42,7 @@ export const Link = styled.a`
     /* mix-blend-mode: difference; */
     &::before {
         content: '';
-        /* background-color: ${linkColor}; */
+        background-color: ${linkColor};
         width: 100%;
         height: 3px;
         position: absolute;
