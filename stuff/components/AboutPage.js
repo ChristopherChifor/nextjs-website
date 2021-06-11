@@ -12,9 +12,10 @@ export default function AboutPage() {
         setContactOpen(!contactOpen)
     }
     return(
-
+        //TODO
         <AppWrapper>
             <Main>
+                Todo
                 <NavBar toggleContact={toggleContact} />
 
 
