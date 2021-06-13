@@ -15,7 +15,6 @@ export default function AboutPage() {
         //TODO
         <AppWrapper>
             <Main>
-                Todo
                 <NavBar toggleContact={toggleContact} />
 
 
