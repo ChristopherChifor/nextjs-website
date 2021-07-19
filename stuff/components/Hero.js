@@ -16,7 +16,7 @@ export const useMousePosition = () => {
 
     return position;
 };
-const Ball = styled.div`
+export const Ball = styled.div`
     position: absolute;
     top: ${props => props.y}px;
     left: ${props => props.x}px;
@@ -48,9 +48,7 @@ const SocialContainer = styled.div`
             width: 50px;
             height: 50px;
         }
-  
     }
-  
 `;
 
 const SocialButton = styled.button`

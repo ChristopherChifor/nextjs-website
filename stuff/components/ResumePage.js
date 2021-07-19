@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import { AppWrapper, Main, Subtitle, Title } from '../styles';
 import Contact from './Contact';
 import NavBar from './NavBar';
 import {Link} from '../styles'
+import { Ball } from './Hero'
+import useMousePosition from './Hero'
 
 
 const ResumeWrapper = styled.div`
@@ -11,7 +13,7 @@ const ResumeWrapper = styled.div`
   display: grid;
   justify-content: center;
   grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 0.2fr 0.2fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 0.5fr;
   gap: 10px 0px;
   font-size: 130%;
   grid-template-areas:
@@ -25,7 +27,6 @@ const ResumeWrapper = styled.div`
     }
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
-        /* background-color: red; */
         grid-template-areas:
     "work"
     "job"
@@ -65,7 +66,10 @@ const Skills = styled.div`
 
 const Download = styled.div` grid-area: courses;`
 
+let previousPosition = { x: 0, y: 0 };
 export default function ResumePage() {
+    const position = useMousePosition();
+    const ref = useRef()
     const [contactOpen, setContactOpen] = useState(false)
     const toggleContact = () => {
         setContactOpen(!contactOpen)
@@ -73,21 +77,24 @@ export default function ResumePage() {
     return (
         <AppWrapper>
             <Main>
+            <Ball x={position.x} y={position.y} />
                 <NavBar toggleContact={toggleContact} />
                 <ResumeWrapper>
                     <TitleSection>
-                        <h1>Experience</h1>
+                        <h1> 
+                        Experience
+                        </h1>
                     </TitleSection>
                     <Info>
                         <h1>Education</h1>
                     </Info>
                     <Mykigai>
-                        <h1><Link href="https://www.mykigai.com/">Mykigai 🧬</Link></h1>
+                        <h1><Link href="https://www.mykigai.com/" target="_blank">Mykigai 🧬</Link></h1>
                         Full Stack Developer • Product Designer
                         <h5> <i>2021 Summer</i></h5>
                     </Mykigai>
                     <University>
-                        <h1><Link href="https://www.utoronto.ca/">University of Toronto 🏫</Link></h1>
+                        <h1><Link href="https://www.utoronto.ca/" target="_blank">University of Toronto 🏫</Link></h1>
                             HBSc • Computer Science, Mathematics, Statistics and Economics <br />
                         <h5> <i>2019-2023</i></h5>
                     </University>
