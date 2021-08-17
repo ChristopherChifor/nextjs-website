@@ -16,7 +16,7 @@ const ContactWrapper = styled.div`
   
   width: ${props => props.isOpen ? 20 : 0}vw; 
   @media (max-width: 600px) {
-    width: ${props => props.isOpen ? 100 : 0}vw; 
+    width: ${props => props.isOpen ? 100 : 0}%; 
   }
 
   & > * {

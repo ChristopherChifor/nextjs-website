@@ -11,6 +11,7 @@ const NavBarWrapper = styled.nav`
 
 const NavButton = styled.button`
     all: unset;
+    color: black;
     &:last-child {
         margin-left: auto;
     }

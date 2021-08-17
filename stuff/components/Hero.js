@@ -70,12 +70,16 @@ const SocialButton = styled.button`
 `;
 
 const Footer = styled.div`
-    padding: 0rem 2rem;
+    /* padding: 0rem 2rem; */
     position: fixed;     
        text-align: left;    
        bottom: 0px; 
        width: 100%;
-    position: fixed;
+       @media (max-width: 600px) {
+      position: relative;
+      margin-top: 5rem;
+      padding: 0rem;
+  }
 `;
 
 
@@ -91,14 +95,14 @@ export default function Hero() {
             <Subtitle>Full Stack Developer and Product Designer</Subtitle>
             <Info>Located in Toronto, Canada 📍 <br />
             Studying at the University of Toronto</Info>
-            <Info>Currently working on longevity at  <Link href="https://www.mykigai.com/"><b>Mykigai</b></Link></Info>
+            <Info>Currently working on longevity at  <Link href="https://www.mykigai.com/" target="_blank"><b>Mykigai</b></Link></Info>
             <SocialContainer>
-                <a href="https://github.com/ChristopherChifor"><img src='/github.svg' /></a>
-                <a href="https://www.linkedin.com/in/christopher-chifor/"><img src='/linkedin.svg' /></a>
-                <a href="https://twitter.com/ChrisChifor"><img src='/twitter.svg' /></a>
-                <a href="https://distrokid.com/hyperfollow/ock4/cant-find-you-feat-oliana"><img src='/headphones.svg' /></a>
+                <a href="https://github.com/ChristopherChifor" target="_blank"><img src='/github.svg' /></a>
+                <a href="https://www.linkedin.com/in/christopher-chifor/" target="_blank"><img src='/linkedin.svg' /></a>
+                <a href="https://twitter.com/ChrisChifor" target="_blank"><img src='/twitter.svg' /></a>
+                <a href="https://distrokid.com/hyperfollow/ock4/cant-find-you-feat-oliana" target="_blank"><img src='/headphones.svg' /></a>
             </SocialContainer>
-            <Footer>Designed and built by me :)</Footer>
+            <Footer>Designed and built by me 😊</Footer>
         </Section>
     )
 }

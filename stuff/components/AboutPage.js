@@ -51,6 +51,7 @@ const Info =styled.div`
   @media (max-width: 600px) {
       margin-left: 0;
       width: 25rem;
+      font-size: 2.1rem;
   }
 
 `
@@ -86,12 +87,12 @@ export default function AboutPage() {
                     </WhoAmI>
                     <Info>
                     I combine user research, wireframing, prototyping & development to transform complex problems into intriguing solutions.
-                    In my free time I love to learn more about machine learning and blockchain technologies all while keeping up with my studies.
+                    In my free time, I love to learn more about machine learning and blockchain technologies all while keeping up with my studies.
                     
                     </Info>
                     
                     <Contact isOpen={contactOpen} toggleContact={toggleContact} />
-                    <img src="/public/forest.png" />
+                    {/* <img src="/public/forest.png" /> */}
                 </AboutWrapper>
                 
 
