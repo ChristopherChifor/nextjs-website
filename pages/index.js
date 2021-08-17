@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Chris Chifor</title>
+        <title>Christopher Chifor</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
       <App/>
