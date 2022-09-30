@@ -124,7 +124,7 @@ export default function Home() {
                 alt="My Music"
               />
             </a>
-            <a
+            {/* <a
               href="https://github.com/ChristopherChifor"
               target="_blank"
               rel="noopener noreferrer"
@@ -134,7 +134,7 @@ export default function Home() {
                 src="/github.svg"
                 alt="Github"
               />
-            </a>
+            </a> */}
           </div>
         </Text>
       </section>
