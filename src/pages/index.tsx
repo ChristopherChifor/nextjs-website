@@ -22,13 +22,13 @@ export default function Home() {
             Get in touch{" "}
           </Button>
         </a>
-        <Link href="/about">
+        {/* <Link href="/about">
           <a className="mt-6 inline-block">
             <Button>
               About me{" "}
             </Button>
           </a>
-        </Link>
+        </Link> */}
       </main>
 
       <section className="container">
