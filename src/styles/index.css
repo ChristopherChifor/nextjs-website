@@ -1,0 +1,23 @@
+@import "https://rsms.me/inter/inter.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  @apply text-black bg-neutral-100 dark:text-neutral-100 dark:bg-black;
+  /* background-image: url("/grain.png"); */
+  background-image: url("/topography-light.svg");
+  background-size: 19rem 19rem;
+}
+
+/* dark mode body */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url("/topography-dark.svg");
+  }
+}
+
+main {
+  /* background-image: url("/topography.svg"); */
+  background-size: 19rem 19rem;
+}
