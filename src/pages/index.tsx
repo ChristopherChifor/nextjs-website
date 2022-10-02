@@ -103,7 +103,7 @@ export default function Home() {
               />
             </a>
             <a
-              href="https://github.com/ChristopherChifor"
+              href="https://www.linkedin.com/in/christopher-chifor"
               target="_blank"
               rel="noopener noreferrer"
             >
