@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import { AppProps } from 'next/app'
-import 'styles/index.css'
+import Head from "next/head";
+import { AppProps } from "next/app";
+import "../styles/index.css";
+import Contact from "components/Contact";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -22,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/favicon-32x32.ico"
         />
         <link
           rel="icon"
@@ -35,9 +37,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+
       <Component {...pageProps} />
+      <Toaster />
+      <Contact />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
