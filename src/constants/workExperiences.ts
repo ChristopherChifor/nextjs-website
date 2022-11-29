@@ -20,10 +20,17 @@ export const WORK_EXPERIENCES: {
     date: "January 2021 - April 2021 | Part-Time",
   },
   {
-    title: "L33T Venture",
+    title: "L33T Ventures",
     role: "Full-Stack + Blockchain Developer",
     src: "/L33T.svg",
     color: "bg-purple-800",
     date: "September 2022 - Present | Part-Time",
+  },
+  {
+    title: "Mintink",
+    role: "Front-End Developer",
+    src: "/mintink.svg",
+    color: "bg-blue-800",
+    date: "October 2022 - Present | Part-Time",
   }
 ];
