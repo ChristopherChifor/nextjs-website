@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { AppProps } from "next/app";
 import "../styles/index.css";
-import Contact from "components/Contact";
+import Contact from "../components/Contact";
 import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
