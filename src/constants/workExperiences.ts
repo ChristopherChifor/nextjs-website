@@ -29,7 +29,7 @@ export const WORK_EXPERIENCES: {
   {
     title: "Mintink",
     role: "Front-End Developer",
-    src: "/mintink.svg",
+    src: "/Mintink.svg",
     color: "bg-blue-800",
     date: "October 2022 - Present | Part-Time",
   }
