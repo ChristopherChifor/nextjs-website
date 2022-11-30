@@ -5,6 +5,8 @@ import { categories } from "constants/technologies";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import { cx } from "utils/cx";
+import Link from "next/link";
+import { Button } from "components/display/Button";
 
 export default function Categories() {
   return (
@@ -25,7 +27,7 @@ export default function Categories() {
         <a
           href="https://linktr.ee/ock4"
           target="_blank"
-          className="cursor-pointer hover:underline hover:text-amber-500 text-blue-500 transition-all duration-300 dark:text-amber-500 dark:hover:text-blue-500"
+          className="cursor-pointer underline hover:text-amber-500 text-blue-500 transition-all duration-300 dark:text-amber-500 dark:hover:text-blue-500"
         >
           here
         </a>
@@ -37,15 +39,15 @@ export default function Categories() {
 
       <div className="dark:invert">
         <Tab.Group>
-          <Tab.List className="flex space-x-1 rounded-xl bg-blue-800/20 p-1">
+          <Tab.List className="flex space-x-1 rounded-xl bg-blue-800/20 p-1 py-2">
             {Object.keys(categories).map((category) => (
               <Tab
                 key={category}
                 className={({ selected }) =>
                   cx(
-                    "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-black ",
+                    "w-full rounded-lg py-4 text-sm font-medium leading-5 text-black",
                     "ring-white ring-opacity-60 ring-offset-2",
-                    "ring-offset-blue-500 focus:outline-none focus:ring-2",
+                    "ring-offset-blue-800 focus:outline-none focus:ring-2",
                     selected
                       ? "bg-white shadow"
                       : " hover:bg-white/[0.12]  hover:text-blue-600 transition-all"
@@ -61,7 +63,7 @@ export default function Categories() {
               <Tab.Panel
                 key={index}
                 className={cx(
-                  "rounded-xl bg-white p-3 dark:text-black",
+                  "rounded-xl bg-white p-3 py-4 dark:text-black",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
                 )}
               >
@@ -74,20 +76,19 @@ export default function Categories() {
                             className={cx(
                               "w-full px-4 py-2 text-left",
                               "text-sm font-medium focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75",
-                              "relative rounded-md p-3 hover:bg-gray-100 flex justify-between"
+                              "relative rounded-md p-3 hover:bg-gray-100 flex justify-between",
+                              "cursor-pointer"
                             )}
                             as="li"
                           >
                             <div>
-                              <h3 className="flex w-full justify-between text-sm font-medium leading-5 ">
+                              <h3 className="flex w-full justify-between text-sm font-medium leading-5">
                                 {post.title}
                               </h3>
-
                               <p className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
                                 {post.date}
                               </p>
                             </div>
-
                             <ChevronUpIcon
                               className={`${
                                 open
@@ -96,7 +97,7 @@ export default function Categories() {
                               } h-5 w-5`}
                             />
                           </Disclosure.Button>
-                          <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                          <Disclosure.Panel className="px-4 pt-1 pb-2 text-sm text-gray-500">
                             {post.content}
                           </Disclosure.Panel>
                         </>
@@ -108,6 +109,18 @@ export default function Categories() {
             ))}
           </Tab.Panels>
         </Tab.Group>
+      </div>
+      <div className="flex justify-between -mb-24 mt-12 max-w-lg">
+        <Text className="">
+          That's basically me. I appreciate you taking the time to read about me
+          and what I've done! If you're in Toronto and would like to connect,
+          dont hesitate to email me!
+          <div className="mt-4">
+            <Link href="/" className="mt-6">
+              <Button>Go Home</Button>
+            </Link>
+          </div>
+        </Text>
       </div>
     </main>
   );

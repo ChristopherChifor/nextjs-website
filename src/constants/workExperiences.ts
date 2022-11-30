@@ -10,14 +10,14 @@ export const WORK_EXPERIENCES: {
     role: "Full-Stack Developer + Product Designer",
     src: "/mykigai.png",
     color: "bg-emerald-600",
-    date: "April 2021 - January 2022 | Full-Time",
+    date: "April 2021 - October 2021 | Full-Time",
   },
   {
     title: "Airwhistle",
     role: "Website Creator + Designer",
     src: "/airwhistle.svg",
     color: "bg-amber-700",
-    date: "January 2021 - April 2021 | Part-Time",
+    date: "May 2022 - August 2022 | Part-Time",
   },
   {
     title: "L33T Ventures",
