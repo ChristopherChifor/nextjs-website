@@ -30,7 +30,7 @@ const Button = React.forwardRef(
   ) => {
     const classNames = useClassNames(() => {
       const base =
-        "inline-flex items-center justify-center font-medium transition-all focus:outline-none focus:ring-2  disabled:cursor-not-allowed disabled:filter disabled:contrast-75 hover:shadow-xl focus:shadow-xl";
+        "inline-flex items-center justify-center font-medium transition-all focus:outline-none focus:ring-2  disabled:cursor-not-allowed disabled:filter disabled:contrast-75 hover:shadow-xl focus:shadow-xl hover:scale-105 transition-all";
 
       const themes = {
         primary:
