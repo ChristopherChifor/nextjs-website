@@ -9,7 +9,7 @@ export const WORK_EXPERIENCES: {
     title: "MYKIGAI",
     role: "Full-Stack Developer + Product Designer",
     src: "/mykigai.png",
-    color: "bg-emerald-600",
+    color: "bg-blue-800",
     date: "April 2021 - October 2021 | Full-Time",
   },
   {
@@ -23,7 +23,7 @@ export const WORK_EXPERIENCES: {
     title: "Duolingo",
     role: "Front-End Developer",
     src: "/duolingo.svg",
-    color: "bg-blue-800",
+    color: "bg-emerald-600",
     date: "April 2022 - September 2022 | Full-Time",
   },
   {
