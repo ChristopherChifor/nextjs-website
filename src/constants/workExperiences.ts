@@ -20,17 +20,17 @@ export const WORK_EXPERIENCES: {
     date: "May 2022 - August 2022 | Part-Time",
   },
   {
+    title: "Duolingo",
+    role: "Front-End Developer",
+    src: "/duolingo.svg",
+    color: "bg-blue-800",
+    date: "April 2022 - September 2022 | Full-Time",
+  },
+  {
     title: "L33T Ventures",
     role: "Full-Stack + Blockchain Developer",
     src: "/L33T.svg",
     color: "bg-purple-800",
     date: "September 2022 - Present | Part-Time",
   },
-  {
-    title: "Mintink",
-    role: "Front-End Developer",
-    src: "/Mintink.svg",
-    color: "bg-blue-800",
-    date: "October 2022 - Present | Part-Time",
-  }
 ];
