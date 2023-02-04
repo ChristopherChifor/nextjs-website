@@ -7,13 +7,6 @@ export const WORK_EXPERIENCES: {
   date : string;
 }[] = [
   {
-    title: "Duolingo",
-    role: "Front-End Developer",
-    src: "/duolingo.svg",
-    color: "bg-emerald-600",
-    date: "April 2022 - September 2022 | Full-Time",
-  },
-  {
     title: "MYKIGAI",
     role: "Full-Stack Developer + Product Designer",
     src: "/mykigai.png",
