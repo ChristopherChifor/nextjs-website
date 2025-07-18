@@ -1,23 +1,21 @@
-@import "https://rsms.me/inter/inter.css";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  @apply text-black bg-neutral-100 dark:text-neutral-100 dark:bg-black;
-  /* background-image: url("/grain.png"); */
-  background-image: url("/topography-light.svg");
-  background-size: 19rem 19rem;
+html, body {
+  overscroll-behavior: none;
 }
 
-/* dark mode body */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-image: url("/topography-dark.svg");
-  }
+a:hover, .hover\:text-purple-400:hover {
+  color: #7c3aed !important;
 }
 
-main {
-  /* background-image: url("/topography.svg"); */
-  background-size: 19rem 19rem;
+/* Cursor pointer for blue text in tl;dr section only */
+section:first-of-type .text-blue-500:hover {
+  cursor: pointer;
 }
+
+/* Cursor default for blue text in My Work section */
+section:nth-of-type(2) .text-blue-500:hover {
+  cursor: default;
+} 
