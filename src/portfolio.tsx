@@ -6,7 +6,21 @@ export default function Portfolio() {
       <div className="max-w-5xl mx-auto h-full flex flex-col">
         {/* Header */}
         <header className="mb-12">
-          <div className="flex justify-between items-start mb-4 mt-16">
+          {/* Mobile Layout */}
+          <div className="md:hidden mt-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+              Chris Chifor
+            </h1>
+            <p className="text-gray-600 italic text-lg mb-4">
+              software engineer & designer
+            </p>
+            <p className="text-gray-900 text-lg mb-8">
+              Building practical tools for the web.
+            </p>
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden md:flex justify-between items-start mb-4 mt-16">
             <div>
               <h1 className="text-4xl font-bold text-gray-900 mb-2">
                 Chris Chifor
@@ -20,7 +34,6 @@ export default function Portfolio() {
             </div>
           </div>
         </header>
-
 
         {/* TL;DR Section */}
         <section className="mb-16">
